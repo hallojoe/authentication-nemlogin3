@@ -6,7 +6,11 @@
     <RootNamespace>Casko.DefaultsFor.NemLogin3.Web.UI</RootNamespace>
   </PropertyGroup>
     
+<!--  <ItemGroup>-->
+<!--    <ProjectReference Include="..\Casko.Authentication.NemLogin3.Web\Casko.Authentication.NemLogin3.Web.csproj" />-->
+<!--  </ItemGroup>-->
+    
   <ItemGroup>
-    <ProjectReference Include="..\Casko.Authentication.NemLogin3.Web\Casko.Authentication.NemLogin3.Web.csproj" />
+    <PackageReference Include="Casko.Authentication.NemLogin3.Web" />
   </ItemGroup>
 </Project>
