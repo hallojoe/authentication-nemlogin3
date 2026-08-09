@@ -4,7 +4,14 @@
         <TargetFramework>net10.0</TargetFramework>
         <ImplicitUsings>enable</ImplicitUsings>
         <Nullable>enable</Nullable>
-        <RootNamespace>Casko.NemLogin3.Web</RootNamespace>
+        <RootNamespace>Casko.Authentication.NemLogin3.Web</RootNamespace>
+        <PackageId>Casko.Authentication.NemLogin3.Web</PackageId>
+        <Authors>Casper Korsgaard</Authors>
+        <Company>Casko</Company>
+        <Description>Reusable ASP.NET Core support for NemLog-in 3 / OIOSAML 3 SAML authentication, service provider metadata, login/logout endpoints, and claim normalization.</Description>
+        <PackageTags>NemLog-in;NemLogin3;OIOSAML;SAML;Authentication;ASP.NET Core</PackageTags>
+        <PackageReadmeFile>README_nuget.md</PackageReadmeFile>
+        <RepositoryType>git</RepositoryType>
     </PropertyGroup>
     
     <ItemGroup>
@@ -14,6 +21,10 @@
     <ItemGroup>
       <PackageReference Include="ITfoxtec.Identity.Saml2" />
       <PackageReference Include="ITfoxtec.Identity.Saml2.MvcCore" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <None Include="../../docs/README_nuget.md" Pack="true" PackagePath="/" />
     </ItemGroup>
 
 </Project>

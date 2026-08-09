@@ -1,0 +1,37 @@
+name: "Feature request"
+description: "Suggest an idea for this package."
+labels: "enhancement"
+body:
+- type: markdown
+  attributes:
+    value: |
+      Thanks for suggesting an improvement. Please keep requests focused on the reusable NemLog-in 3 / SAML package surface.
+- type: textarea
+  id: "summary"
+  attributes:
+    label: "Feature summary"
+    description: "Write a brief summary of the feature."
+  validations:
+    required: true
+- type: dropdown
+  id: "area"
+  attributes:
+    label: "Package area"
+    options:
+      - "SAML configuration"
+      - "Service provider metadata"
+      - "Login/logout endpoints"
+      - "Certificates"
+      - "Claims"
+      - "Extension points"
+      - "Documentation"
+      - "Other"
+  validations:
+    required: true
+- type: textarea
+  id: "details"
+  attributes:
+    label: "Additional details"
+    description: "Explain the scenario, expected benefit, and any compatibility concerns."
+  validations:
+    required: false

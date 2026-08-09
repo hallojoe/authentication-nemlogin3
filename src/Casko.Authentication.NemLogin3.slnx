@@ -1,0 +1,5 @@
+<Solution>
+  <Project Path="Casko.Authentication.NemLogin3.Web.Routing/Casko.Authentication.NemLogin3.Web.Routing.csproj" />
+  <Project Path="Casko.Authentication.NemLogin3.Web.UI/Casko.Authentication.NemLogin3.Web.UI.csproj" />
+  <Project Path="Casko.Authentication.NemLogin3.Web/Casko.Authentication.NemLogin3.Web.csproj" />
+</Solution>

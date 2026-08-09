@@ -1,0 +1,14 @@
+{
+  "profiles": {
+    "Casko.Authentication.NemLogin3.Web.UI": {
+      "commandName": "Project",
+      "dotnetRunMessages": true,
+      "launchBrowser": true,
+      "launchUrl": "https://samlcasko0001.dev.localhost/",
+      "applicationUrl": "https://localhost:44801;http://localhost:34819",
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      }
+    }    
+  }
+}

@@ -1,0 +1,60 @@
+name: "Bug report"
+description: "File a bug report to help improve this package."
+labels: "bug"
+body:
+- type: markdown
+  attributes:
+    value: |
+      Thanks for taking the time to report this issue. Please include enough detail to reproduce the NemLog-in 3 / SAML behavior.
+- type: input
+  id: "packageVersion"
+  attributes:
+    label: "Which Casko.Authentication.NemLogin3.Web version are you using?"
+    description: "Leave blank if you're not sure."
+  validations:
+    required: false
+- type: input
+  id: "dotnetVersion"
+  attributes:
+    label: ".NET version"
+    description: "For example: 10.0.x"
+  validations:
+    required: true
+- type: dropdown
+  id: "area"
+  attributes:
+    label: "Affected area"
+    options:
+      - "SAML login"
+      - "Assertion consumer service"
+      - "Single logout"
+      - "Service provider metadata"
+      - "Certificates"
+      - "Claims"
+      - "Configuration"
+      - "Other"
+  validations:
+    required: true
+- type: textarea
+  id: "summary"
+  attributes:
+    label: "Bug summary"
+    description: "Describe the actual behavior and the expected behavior."
+    placeholder: "Tell us what failed and what you expected to happen."
+  validations:
+    required: true
+- type: textarea
+  id: "reproduction"
+  attributes:
+    label: "Steps to reproduce"
+    description: "Include relevant configuration shape, endpoint paths, metadata/certificate details, logs, or SAML response context. Do not include private keys, passwords, or production secrets."
+    placeholder: "1. Configure ...\n2. Browse to ...\n3. NemLog-in returns ...\n4. The package ..."
+  validations:
+    required: true
+- type: textarea
+  id: "details"
+  attributes:
+    label: "Additional details"
+    description: "Add stack traces, sanitized logs, screenshots, or related observations."
+  validations:
+    required: false

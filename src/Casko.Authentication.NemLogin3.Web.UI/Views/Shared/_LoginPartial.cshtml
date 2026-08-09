@@ -1,0 +1,22 @@
+﻿@if (((System.Security.Claims.ClaimsIdentity)User.Identity).IsAuthenticated)
+{
+    @if (User.Identity.Name != null)
+    {
+        <span class="navbar-text">Hi, @User.Identity.Name</span>
+    }
+    else
+    {
+        <span class="navbar-text">Hi</span>
+    }
+    <form class="form-inline" asp-controller="Auth" asp-action="Logout">
+        <button type="submit" class="nav-link btn btn-link text-dark">Logout</button>
+    </form>
+}
+else
+{
+    <ul class="list-group">
+        <li class="list-group-item">
+            <a asp-controller="Auth" asp-action="Login">Login</a>
+        </li>
+    </ul>
+}
