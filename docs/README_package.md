@@ -56,6 +56,7 @@ The host must provide:
 {
   "NemLogin3": {
     "PublicBaseUrl": "https://samlcasko0001.dev.localhost",
+    "EntityId": "https://samlcasko0001.dev.localhost",
     "MetadataPath": "/Metadata",
     "LoginPath": "/Auth/Login",
     "AssertionConsumerServicePath": "/Auth/AssertionConsumerService",
@@ -72,7 +73,7 @@ The host must provide:
 }
 ```
 
-`PublicBaseUrl` and `Saml2:Issuer` must match the service provider registration at NemLog-in. `Saml2:Issuer` becomes the SAML metadata entity ID, so metadata generation fails if it is missing.
+`PublicBaseUrl` controls the ACS and SLO endpoint URLs in metadata. Set `EntityId` to the unique entity ID registered for the service provider; it may differ from `PublicBaseUrl`, for example when the public URL includes a port. `EntityId` defaults to `Saml2:Issuer` for backwards compatibility, so when it is set it should match `Saml2:Issuer`.
 
 ## Maintainer Notes
 

@@ -6,6 +6,12 @@ public class NemLogin3Options
 
     public string? PublicBaseUrl { get; set; }
 
+    /// <summary>
+    /// Gets or sets the unique SAML service provider entity ID emitted in metadata.
+    /// When omitted, the configured <c>Saml2:Issuer</c> is used.
+    /// </summary>
+    public string? EntityId { get; set; }
+
     public string MetadataPath { get; set; } = "/Metadata";
 
     public string LoginPath { get; set; } = "/Auth/Login";
