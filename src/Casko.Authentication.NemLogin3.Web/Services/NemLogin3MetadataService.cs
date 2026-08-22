@@ -19,7 +19,7 @@ public class NemLogin3MetadataService(
     public EntityDescriptor CreateMetadata(HttpRequest request)
     {
         var defaultSite = GetPublicBaseUri(request);
-        var entityDescriptor = new NemLoginEntityDescriptor(saml2Configuration)
+        var entityDescriptor = new NemLoginEntityDescriptor(saml2Configuration, _options.EntityId)
         {
             ValidUntil = 365,
             SPSsoDescriptor = new SPSsoDescriptor
@@ -139,10 +139,15 @@ public class NemLogin3MetadataService(
 
     private sealed class NemLoginEntityDescriptor : EntityDescriptor
     {
-        public NemLoginEntityDescriptor(Saml2Configuration config)
+        public NemLoginEntityDescriptor(Saml2Configuration config, string? entityId)
             : base(config)
         {
             MetadataSigningCertificate = null;
+
+            if (!string.IsNullOrWhiteSpace(entityId))
+            {
+                EntityId = entityId;
+            }
         }
     }
 }

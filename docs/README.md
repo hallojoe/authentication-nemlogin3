@@ -65,7 +65,7 @@ The service provider metadata endpoint is:
 https://samlcasko0001.dev.localhost/metadata
 ```
 
-`Saml2:Issuer` and `NemLogin3:PublicBaseUrl` must match the service provider registration used with NemLog-in.
+`NemLogin3:EntityId` is the unique value emitted as the metadata entity ID and should match `Saml2:Issuer`. `NemLogin3:PublicBaseUrl` controls the public ACS and SLO URLs and may include a port.
 
 ## Package Documentation
 
